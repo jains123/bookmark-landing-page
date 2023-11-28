@@ -1,0 +1,25 @@
+@import "../abstracts/variables";
+
+header {
+    font-size: $mainFontSize;
+
+    a {
+        &:hover {
+            color: $primaryRed;
+        }
+    }
+}
+
+main {
+    font-size: $mainFontSize;
+
+    p {
+        color: $neutralBlue;
+        line-height: 1.6em;
+    }
+
+    li {
+        list-style-type: none;
+        color: $neutralBlue;
+    }
+}

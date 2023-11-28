@@ -1,0 +1,85 @@
+@import "../abstracts/mixins";
+@import "../abstracts/variables";
+
+.main-wrapper {
+    max-width: $maxWidth;
+    margin: 0 auto;
+    .hero-container {
+        @include flexbox-c;
+        align-items: center;
+        padding: 7% 0;
+
+        .hero-text-container {
+            height: 100%;
+            margin: auto 0;
+            flex: 50%;
+            padding: 0 8%;
+
+            h1 {
+                font-size: 4rem;
+                margin-bottom: .7em;
+            }
+
+            p {
+                margin-bottom: 2em;
+            }
+
+            .hero-buttons-container {
+                
+                button {
+                    height: 5rem;
+                    width: 20rem;
+                    font-weight: 600;
+                    border: none;
+                    cursor: pointer;
+                    border-radius: $borderRadius;
+                    transition: $transition;
+                }
+
+                #chrome-btn {
+                    background-color: $primaryBlue;
+                    color: white;
+                    margin-right: 2em;
+                    border: solid 2px $primaryBlue;
+
+                    &:hover {
+                        background-color: #fff;
+                        color: black;
+                    }
+                }
+
+                #firefox-btn {
+                    background-color: lightgray;
+                    border: solid 2px lightgray;
+
+                    &:hover {
+                        background-color: #fff;
+                    }
+                }
+            }
+        }
+
+        .hero-image-container {
+            flex: 50%;
+            @include grid-center;
+            position: relative;
+
+            img {
+                z-index: 110;
+            }
+
+            &:after {
+                content: "";
+                position: absolute;
+                right: -200px;
+                bottom: -21px;
+                height: 350px;
+                width: 600px;
+                border-radius: 0 $borderRadius $borderRadius 40%;
+                background-color: $primaryBlue;
+                z-index: 100;
+                margin-right: 60px;
+            }
+        }
+    }
+}

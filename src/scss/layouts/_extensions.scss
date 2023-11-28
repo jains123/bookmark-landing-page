@@ -1,0 +1,72 @@
+@import "../abstracts/mixins";
+
+.extensions-container {
+    margin-bottom: 20rem;
+    .extensions-text-container {
+        text-align: center;
+        width: 34%;
+        margin: 0 auto;
+        margin-bottom: 2em;
+
+        h2 {
+            margin-bottom: .7em;
+        }
+    }
+
+    .extensions-options-container {
+        @include flexbox-c-c;
+
+        .extension {
+            min-height: 400px;
+            width: 300px;
+            box-shadow: $shadow;
+            padding: .9rem;
+            @include flexbox;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+
+            &:nth-child(2) {
+                margin: 0 3rem;
+            }
+
+            .logo{
+                height: 120px;
+                width: 120px;
+            }
+
+            .dots {
+                width: 100%;
+            }
+
+            .extension-text {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                flex: .5;
+
+                h2 {
+                    margin-top: 1rem;
+                }
+                p {
+                    margin-bottom: 2rem;
+                }
+            }
+        }
+
+        #firefox {
+            transform: translateY(30px);
+        }
+
+        #opera {
+            transform: translateY(60px);
+ 
+        }
+
+        button {
+            width: 88%;
+            margin-top: 2rem;
+        }
+    }
+}

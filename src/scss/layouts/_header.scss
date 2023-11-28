@@ -1,0 +1,59 @@
+@import "../abstracts/variables";
+@import "../abstracts/mixins";
+
+header {
+    max-width: $maxWidth;
+    margin: 0 auto;
+    
+    .header-wrapper {
+        @include flexbox-c-sb;
+        padding: 2em 5%;
+
+        img {
+            height: 3rem;
+        }
+
+        nav {
+            @include flexbox;
+
+            ul {
+                @include flexbox;
+                align-items: center;
+
+                li {
+                    list-style-type: none;
+                    
+                    a {
+                        cursor: pointer;
+
+                        &:hover {
+                            transition: $transition;
+                        }
+                    }
+
+                    &:nth-child(2) {
+                        margin: 0 4em 0 4em;
+                    }
+                }
+            }
+
+            button {
+                margin-left: 4em;
+                height: 3em;
+                width: 7em;
+                background-color: $primaryRed;
+                color: #fff;
+                font-weight: 600;
+                border-radius: $borderRadius;
+                cursor: pointer;
+                border: solid 2px $primaryRed;
+                transition: $transition;
+                
+                &:hover {
+                    color: $primaryRed;
+                    background-color: #fff;
+                }
+            }
+        }
+    }
+}

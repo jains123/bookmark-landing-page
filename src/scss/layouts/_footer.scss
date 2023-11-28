@@ -1,0 +1,97 @@
+@import "../abstracts/mixins";
+
+footer {
+   color: white;
+
+    .footer-text-container {
+        background-color: $primaryBlue;
+        @include flexbox-c-c;
+        flex-direction: column;
+        color: white;
+        padding: 3rem 0;
+
+        p {
+            margin-bottom: 2rem;
+            font-size: 16px;
+        }
+
+        h2 {
+            font-size: 28px;
+            text-align: center;
+            width: 450px;
+            margin-bottom: 2rem;
+        }
+
+        button {
+            background-color: $primaryRed;
+
+            &:hover {
+                border: solid 1px $primaryRed;
+                background-color: white;
+                color: $primaryRed;
+            }
+        }
+
+        input {
+            height: 4.2rem;
+            width: 30rem;
+            padding: 1em 1.3em;
+            font-size: 16px;
+            border: none;
+            border-radius: $borderRadius;
+            margin-right: 1.2em;
+
+            &:focus-visible {
+              outline: none;
+            }
+        }
+    }
+
+
+    .bottom-footer-container {
+        @include flexbox-c-sb;
+        margin: 0 auto;
+        padding: 2.3em 10%;
+        background-color: $neutralDarkBlue;
+
+        .footer-nav-container {
+            @include flexbox-c-c;
+            ul {
+                @include flexbox-c-c;
+                margin-left: 4em;
+                li {
+                    list-style-type: none;
+                    margin-right: 4em;
+                    
+                    a:hover {
+                        color: $primaryRed;
+                        cursor: pointer;
+                        transition: $transition;
+                    }
+                }
+            }
+
+            path {
+                fill: white;
+            }
+        }
+
+            .footer-social-container {
+
+                #facebook {
+                    margin-right: 2em;
+                }
+
+                svg:hover {
+                        fill: $primaryRed;
+                        transition: $transition;
+                        cursor:pointer;
+
+                    path {
+                        transition: $transition;
+                    }
+                }
+                
+        }
+    }
+}

@@ -1,0 +1,65 @@
+@import "../abstracts/variables";
+
+.faq-container {
+    margin-bottom: 20rem;
+    @include grid-center;
+
+    .faq-text-container {
+        text-align: center;
+        width: 34%;
+        margin: 0 auto;
+        margin-bottom: .5em;
+
+        h2 {
+            margin-bottom: .7em;
+        }
+    }
+
+    .accordion-container {
+        width: 40%;
+        margin: 2em auto;
+        
+        .accordion {
+            width: 100%;
+            text-align: left;
+            background-color: #fff;
+            color: black;
+            padding: 0 1em;
+            @include flexbox-c-sb;
+            border-top: solid 1px lightgray;
+            border-left: none;
+            border-right: none;
+            border-bottom: solid 1px lightgray;
+            border-radius: 0;
+
+            &::after {
+                content: "\f077";
+                font-family: 'Font Awesome 5 Free';
+            }
+
+            &:nth-child(1), &:nth-child(3), &:nth-child(5), &:nth-child(7) {
+                border-bottom: none;
+            }
+
+            &:nth-child(1) {
+                border-top: none;
+            }
+
+            &:hover {
+                color: $primaryRed;
+            }
+        }
+
+        .panel {
+            transition: max-height 0.3s ease-in-out;
+            max-height: 0;
+            overflow: hidden;
+            margin: 0 auto;
+            width: 95%;
+        }
+
+        .active-panel {
+            max-height: 200px;
+        }
+    }
+}

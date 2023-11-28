@@ -1,0 +1,21 @@
+@import "./layouts/_layout-dir";
+@import "./src/scss/abstracts/__abstracts-dir.scss";
+@import "./src/scss/base/__base-dir.scss";
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: $mainFont;
+}
+
+body {
+    // max-width: $maxWidth;
+    min-height: 1080px;
+    margin: 0 auto;
+    overflow-x: hidden;
+}
