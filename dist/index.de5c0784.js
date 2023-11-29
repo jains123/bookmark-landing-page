@@ -44,5 +44,14 @@ for(let k = 0; k < socialSvgs.length; k++){
         paths[k].style.fill = "white";
     });
 }
+const mobileNav = document.querySelector(".mobile-nav");
+console.log(mobileNav);
+document.querySelector(".burger-container").addEventListener("click", function() {
+    mobileNav.style.left = "0";
+    console.log("text");
+});
+document.querySelector("#close").addEventListener("click", function() {
+    mobileNav.style.left = "-150%";
+});
 
 //# sourceMappingURL=index.de5c0784.js.map

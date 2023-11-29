@@ -4,6 +4,7 @@
 .main-wrapper {
     max-width: $maxWidth;
     margin: 0 auto;
+    
     .hero-container {
         @include flexbox-c;
         align-items: center;
