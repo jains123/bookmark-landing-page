@@ -48,7 +48,7 @@ const mobileNav = document.querySelector(".mobile-nav");
 console.log(mobileNav);
 document.querySelector(".burger-container").addEventListener("click", function() {
     mobileNav.style.left = "0";
-    console.log("text");
+    mobileNav.style.overflow = "hidden";
 });
 document.querySelector("#close").addEventListener("click", function() {
     mobileNav.style.left = "-150%";

@@ -7,6 +7,23 @@
 .mobile-nav {
     display: none;
 }
+
+@media only screen and (max-width: 1298px) {
+    .hero-text-container {
+        padding: 0 5% !important;
+    }
+
+    .hero-buttons-container {
+        button {
+            width: 43% !important;
+        }
+    }
+
+    .features-text-container {
+        width: 43% !important;
+    }
+}
+
 @media only screen and (max-width: 1000px) {
     header {
         overflow: hidden;
@@ -29,7 +46,7 @@
             z-index: 10000;
             background-color: $neutralDarkBlue;
             opacity: .98;
-            position: absolute;
+            position: fixed;
             top: 0;
             left: -150%;
             color: white;
@@ -44,6 +61,7 @@
                
                 #close {
                     cursor: pointer;
+                    z-index: 5000;
                 }
                 path, circle {
                     fill: white;
@@ -136,5 +154,139 @@
                     bottom: 265px;
                 }
             }
+    }
+
+    .extensions-container {
+        .extensions-text-container {
+            width: 43% !important;
+        }
+
+        .extensions-options-container {
+            flex-direction: column;
+
+            .extension {
+                width: 45rem !important;
+            }
+        }
+    }
+
+    .faq-container {
+        .faq-text-container {
+            width: 45% !important;
+        }
+
+        .accordion-container {
+            width: 54% !important;
+        }
+    }
+
+    footer .bottom-footer-container {
+        padding: 2.3em 5% !important;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .features-text-container {
+        width: 70% !important;
+    }
+
+    .extensions-container .extensions-text-container {
+        width: 70% !important;
+    }
+
+    .faq-container .faq-text-container {
+        width: 70% !important;
+    }
+
+    .features-container .feature .feature-image-container img {
+        height: 250px;
+    }
+
+    .features-container .feature::after {
+        width: 60%;
+        height: 40%;
+        bottom: 50%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .main-wrapper .hero-container .hero-image-container::after {
+        height: 90% !important;
+        width: 100%;
+        z-index: -100;
+    }
+
+    .features-text-container {
+        width: 90% !important;
+    }
+
+    .features-container .feature .feature-text {
+        padding: 0 5rem;
+    }
+
+    .feature-image-container img {
+        height: 190px !important;
+    }
+
+    .features-container .feature::after {
+        height: 30% !important;
+        bottom: 64% !important;
+    }
+
+    .faq-container .faq-text-container {
+        width: 90% !important;
+        text-align: center;
+    }
+
+    .extensions-container .extensions-text-container {
+        width: 90% !important;
+        margin-bottom: 4em;
+    }
+
+    .faq-container .accordion-container {
+        width: 80% !important;
+    }
+    .footer-text-container {
+        padding: 3rem 5%;
+
+        h2 {
+            width: 100% !important;
+        }
+        .input-container {
+            @include flexbox-c-c;
+            flex-direction: column;
+            width: 100%;
+            margin: 0 auto;
+
+            input {
+                margin-right: 0;
+                margin-bottom: 2em;
+                width: 90%;
+            }
+        }
+    }
+    .bottom-footer-container {
+        flex-direction: column;
+
+        .footer-nav-container {
+            flex-direction: column;
+            svg {
+                margin-bottom: 2em;
+            }
+            ul {
+                margin-left: 0;
+                flex-direction: column;
+
+                li {
+                    margin-bottom: 2em;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 490px) {
+    .extensions-container .extensions-options-container .extension {
+        width: 70% !important;
     }
 }
